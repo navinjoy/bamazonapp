@@ -53,7 +53,8 @@ function getItemAndQualtityfromUser(itemsIdArr) {
             if (itemAvailable) {
                 displayOrderConfirmationAndUpdateDB(requestedItemId, requestedQty);
             } else {
-                console.log("Sorry, Insufficient Quantity !!!")
+                console.log("Sorry, Insufficient Quantity !!!");
+                endDBConnection();
             }
         });
     });
